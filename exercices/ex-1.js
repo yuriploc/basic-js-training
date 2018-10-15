@@ -1,3 +1,4 @@
+// From LambdaSchool
 //Do not change any of the function names
 
 function multiplyByTen(num) {

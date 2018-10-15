@@ -4,9 +4,9 @@
   "description": "VIP basic JS course",
   "main": "index.js",
   "scripts": {
-    "dev": "npx docute -o -w",
-    "test": "npx eslint exercices && npx jest",
-    "lint": "npx eslint",
+    "dev": "docute -o -w",
+    "test": "eslint exercices && jest",
+    "lint": "eslint",
     "test:watch": "npm test -- --watchAll"
   },
   "keywords": [

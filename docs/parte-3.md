@@ -2,7 +2,7 @@
 
 ```js
 // definindo um array
-let studentsNames = ['Dan', 'Maria', 'Sara', 'Raj'];
+let studentNames = ['Dan', 'Maria', 'Sara', 'Raj'];
 
 // imprimindo comprimento de um array
 console.log(studentNames.length);  // 4
@@ -11,13 +11,9 @@ console.log(studentNames.length);  // 4
 console.log(studentNames[1]);  // 'Maria'
 
 // acessando o último item de um array
-studentsNames = ['Dan', 'Maria', 'Sara', ... ,'Raj'];
-
 console.log(studentNames[studentNames.length - 1]);  // 'Raj'
 
 // remodelando um array
-const studentsNames = ['Dan', 'Maria', 'Sara', 'Raj'];
-
 studentNames[0] = 'João';
 
 console.log(studentNames);  // ['João', 'Maria', 'Sara', 'Raj']
@@ -28,7 +24,7 @@ console.log(studentNames);  // ['João', 'Maria', 'Sara', 'Raj']
 `.push` insere no início da lista
 
 ```js
-const studentsNames = ['Dan', 'Maria', 'Sara', 'Raj'];
+const studentNames = ['Dan', 'Maria', 'Sara', 'Raj'];
 
 studentNames.push('Ryan');
 
@@ -37,7 +33,7 @@ console.log(studentNames);  // ['Dan', 'Maria', 'Sara', 'Raj', 'Ryan']
 
 e `.pop` remove do final da lista
 ```js
-const studentsNames = ['Dan', 'Maria', 'Sara', 'Raj'];
+const studentNames = ['Dan', 'Maria', 'Sara', 'Raj'];
 
 studentNames.pop();
 
@@ -47,7 +43,7 @@ console.log(studentNames);  // ['Dan', 'Maria', 'Sara']
 ### .unshift & .shift
 
 ```js
-const studentsNames = ['Dan', 'Maria', 'Sara', 'Raj'];
+const studentNames = ['Dan', 'Maria', 'Sara', 'Raj'];
 
 studentNames.unshift('Ryan');
 
@@ -61,7 +57,7 @@ console.log(studentNames);  // ['Dan', 'Maria', 'Sara', 'Raj']
 ### Iterando em um array
 
 ```js
-const studentsNames = ['Dan', 'Maria', 'Sara', 'Raj'];
+const studentNames = ['Dan', 'Maria', 'Sara', 'Raj'];
 
 for (let i = 0; i < studentNames.length; i++) {
   console.log(studentNames[i]);
@@ -78,14 +74,26 @@ const newAnimals = animals.slice(2); // ["camel", "duck", "elephant"]
 
 ```js
 const months = ['Jan', 'March', 'April', 'June'];
-months.splice(1, 0, 'Feb');
+months.splice(1, 0, 'Feb'); // ['Jan', 'Feb', 'March', 'April', 'June']
 ```
 
 ### .map
+```js
+const salaries = [875, 1000, 950, 1200, 1500.32];
+salaries.map(salary => salary*0.2) // [175, 200, 190, 240, 300.064]
+```
 
 ### .filter
+```js
+const salaries = [875, 1000, 950, 1200, 1500.32];
+salaries.filter(sal => sal > 980) // [ 1000, 1200, 1500.32 ]
+```
 
 ### .sort
+```js
+const frutas = ['maçã', 'banana', 'jaca']
+frutas.sort() // [ 'banana', 'jaca', 'maçã' ]
+```
 
 ## Resumindo
 
@@ -116,10 +124,12 @@ y = y.splice(1,0,'x') // [1, "x", 3]
 
 // map, filter, sort
 y = y.map(e => 'a' + e) // ['a1','ax','a3']
+
 x = [1,2,3,4,5,6,7,8,9]
+
 x = x.filter(e => e > 5) // [6, 7, 8, 9]
+
 x = x.sort((a,b) => b - a ) // [9, 8, 7, 6]
 
 for(let k in x) console.log("%s: %s", k, x)
-
 ```
